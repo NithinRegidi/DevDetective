@@ -28,19 +28,32 @@ input.addEventListener('keydown', (e) => {
 //getUserData() API Fetch Function
 // it is an API so we use Async and Await
 async function getUserData(gitUrl) {
-    const response = await fetch(gitUrl);
-    const data = await response.json(); // Parse response as JSON
+    try {
+        console.log("Fetching data from:", gitUrl);
+        const response = await fetch(gitUrl);
+        const data = await response.json(); // Parse response as JSON
+        
+        console.log("API Response:", data);
 
-    if(!data){
-        throw data; // Throw error if no data received
+        if(!data){
+            throw data; // Throw error if no data received
+        }
+
+        updateProfile(data);    //if data is received show data 
+    } catch (error) {
+        console.error("Error fetching user data:", error);
+        const noResults = get("noResults");
+        noResults.style.scale = 1;
+        setTimeout(() => {
+            noResults.style.scale = 0;
+        }, 2500);
     }
-
-    updateProfile(data);    //if data is received show data 
 }
 
 
 //Profile Update Function
 function updateProfile(data){
+    // const noResults = get("noResults"); // Get the noResults element
     noResults.style.scale = 0;
 
     if (data.message !== "Not Found") {
@@ -104,6 +117,7 @@ function updateProfile(data){
     }
     
     else {
+        const noResults = get("noResults"); // Get the noResults element for error case
         noResults.style.scale = 1;
         setTimeout(() => {
             noResults.style.scale = 0;
@@ -181,12 +195,7 @@ if (localStorage.getItem("dark-mode") === null) {
     }
 }
 
-getUserData(url + "priyansh70");
-
-
-
-
-
+getUserData(url + "google");
 
 
 
