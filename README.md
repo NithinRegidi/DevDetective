@@ -7,7 +7,6 @@ A modern, responsive web application for exploring GitHub user profiles with rea
 ## 🌟 Features
 
 - **Real-time Search**: Instantly search for any GitHub user
-- **Animated Typing**: Engaging typing animation with popular usernames
 - **Theme Toggle**: Switch between dark and light modes
 - **Responsive Design**: Works perfectly on all devices
 - **Profile Details**: Comprehensive user information display
@@ -56,13 +55,6 @@ npm run build
 4. Toggle between dark/light themes
 5. Explore different GitHub profiles
 
-## 📱 Screenshots
-
-### Light Mode
-![Light Mode](./screenshots/light-mode.png)
-
-### Dark Mode
-![Dark Mode](./screenshots/dark-mode.png)
 
 ## 🤝 Contributing
 
@@ -72,16 +64,12 @@ npm run build
 4. Push to the branch (`git push origin feature/AmazingFeature`)
 5. Open a Pull Request
 
-## 📝 License
-
-This project is licensed under the MIT License - see the [LICENSE](LICENSE) file for details.
-
 ## 👤 Author
 
-**Your Name**
+**Nithin Sai Naidu Regidi**
 - GitHub: [@nithinregidi](https://github.com/nithinregidi)
 
 ## 🙏 Acknowledgments
 
 - GitHub API for providing user data
-- Inspiration from modern web design trends
+- Inspiration from LoveBabbar(YT) & modern web design trends
