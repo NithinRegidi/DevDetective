@@ -2,7 +2,6 @@
 
 A modern, responsive web application for exploring GitHub user profiles with real-time search and beautiful UI.
 
-![Dev Detective Preview](./public/Images/preview.png)
 
 ## 🌟 Features
 
